@@ -1,0 +1,10 @@
+version: '3'
+services:
+  qgisserver:
+    #image: jancelin/qgis-server:3.0
+    build: .
+    volumes:
+      - ./qgis_project:/home/qgis/projects
+      - ./config/entrypoint.sh:/root/entrypoint.sh
+    ports:
+      - 8080:8080

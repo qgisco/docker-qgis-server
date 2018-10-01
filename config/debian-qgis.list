@@ -1,0 +1,3 @@
+# latest stable
+deb http://qgis.org/debian stretch main
+deb-src http://qgis.org/debian stretch main
