@@ -9,6 +9,8 @@ docker container for qgis 3 server using instructions of https://docs.qgis.org/t
 ## Run
 You can run the command:
 ```sh
+git clone https://gitlab.com/juusechec/docker-qgis-server
+cd docker-qgis-server
 docker-compose up
 ```
 Next, open the resource:
