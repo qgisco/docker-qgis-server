@@ -19,6 +19,10 @@ http://localhost:8080/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUES
 ```
 For more specific documentation about docker-compose read https://docs.docker.com/compose/reference/overview/
 
+## Container Image
+Docker container image is available in: 
+- https://hub.docker.com/r/qgisco/qgis-server
+
 ## Add new projects
 
 You can put new projects in directory ***projects*** and use a URL like:
@@ -30,4 +34,4 @@ Change the param "MAP" to new path like *MAP=/home/qgis/projects/my_new_project.
 
 ## Some question?
 
-- Please create a new issue: https://gitlab.com/juusechec/docker-qgis-server/issues/new
+- Please create a new issue: https://github.com/qgisco/docker-qgis-server/issues/new
