@@ -1,7 +1,7 @@
 version: '3'
 services:
   qgisserver:
-    #image: jancelin/qgis-server:3.0
+    #image: qgisco/qgis-server:latest
     build: .
     volumes:
       - ./projects:/home/qgis/projects
