@@ -1,0 +1,19 @@
+version: '3'
+services:
+  qgisserver:
+    image: qgisco/qgis-server:latest
+    volumes:
+      - ./projects:/home/qgis/projects
+      - ./geodata:/home/qgis/geodata
+      - ./config/entrypoint.sh:/root/entrypoint.sh
+    ports:
+      - 8080:8080
+  postgres:
+    image: kartoza/postgis:10.0-2.4
+    environment:
+      - ALLOW_IP_RANGE="172.0.0.0/8"
+      - POSTGRES_USER="usuario_qgisco"
+      - POSTGRES_PASS="clave_qgisco"
+      - POSTGRES_DBNAME="qgisco"
+    ports:
+      - 5432:5432

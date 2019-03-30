@@ -19,6 +19,24 @@ http://localhost:8080/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUES
 ```
 For more specific documentation about docker-compose read https://docs.docker.com/compose/reference/overview/
 
+## Use without build
+The docker command to use the container:
+```sh
+docker run \
+  -d \
+  -p 8080:8080 \
+  --name=qgis-server \
+  -v projects:/home/qgis/projects \
+  -e "QGIS_PROJECT_FILE=/home/qgis/projects/world.qgs" \
+  qgisco/qgis-server:latest
+```
+Optionally you can use some examples in docker-compose:
+```sh
+curl -sSL https://raw.githubusercontent.com/qgisco/docker-qgis-server/master/examples/docker-compose-with-postgres.yml > docker-compose.yml
+docker-compose up
+```
+See examples forder for more case of use.
+
 ## Container Image
 Docker container image is available in: 
 - https://hub.docker.com/r/qgisco/qgis-server
