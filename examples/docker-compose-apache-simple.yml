@@ -1,0 +1,10 @@
+version: '3'
+services:
+  qgisserver:
+    image: qgisco/qgis-server:latest
+    volumes:
+      - ./projects:/home/qgis/projects
+      - ./geodata:/home/qgis/geodata
+      - ./config/entrypoint.sh:/root/entrypoint.sh
+    ports:
+      - 8080:8080
