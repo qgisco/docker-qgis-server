@@ -27,7 +27,6 @@ docker run \
   -p 8080:8080 \
   --name=qgis-server \
   -v projects:/home/qgis/projects \
-  -e "QGIS_PROJECT_FILE=/home/qgis/projects/world.qgs" \
   qgisco/qgis-server:latest
 ```
 Optionally you can use some examples in docker-compose:
