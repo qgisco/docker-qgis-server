@@ -11,6 +11,7 @@ XWINDOWSERVER_LOCK_FILE=/tmp/.X99-lock
 QGIS_LOG_FILE=/var/log/qgis/qgisserver.log
 touch $QGIS_LOG_FILE
 chown www-data:www-data $QGIS_LOG_FILE
+
 /usr/sbin/apachectl -D FOREGROUND &
 echo "Open http://localhost:8080/cgi-bin/qgis_mapserv.fcgi?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetCapabilities"
-tail -f /var/log/qgis/qgisserver.log
+tail -f $QGIS_LOG_FILE
