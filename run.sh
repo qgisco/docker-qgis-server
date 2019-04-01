@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/usr/bin/env bash
 docker-compose run --service-ports --rm qgisserver bash

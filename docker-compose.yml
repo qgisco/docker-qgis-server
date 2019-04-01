@@ -6,6 +6,8 @@ services:
     volumes:
       - ./projects:/home/qgis/projects
       - ./geodata:/home/qgis/geodata
+      - ./plugins:/home/qgis/plugins
       - ./config/entrypoint.sh:/root/entrypoint.sh
+      - ./config/qgis.demo.conf:/etc/apache2/sites-available/qgis.demo.conf
     ports:
       - 8080:8080
