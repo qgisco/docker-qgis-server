@@ -14,7 +14,7 @@ RUN apt-get update -y \
   && apt-get upgrade -y \
   && apt-get install qgis-server python-qgis -y --allow-unauthenticated \
   && apt-get install xvfb -y \
-  && apt-get install apache2 libapache2-mod-fcgid -y \
+  && apt-get install apache2 libapache2-mod-fcgid apache2-utils -y \
   && apt-get install curl wget unzip vim ipython3 -y \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get clean
